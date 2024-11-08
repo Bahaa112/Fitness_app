@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fitness_Project</string>
+    <string-array name="exercise_options">
+        <item>Battle Ropes</item>
+        <item>Speed Bag</item>
+        <item>Back Extension</item>
+        <item>Pull-Up</item>
+        <item>Glute Bridge</item>
+        <item>Barbell Squat</item>
+        <item>Running</item>
+        <item>Strong</item>
+    </string-array>
+</resources>
