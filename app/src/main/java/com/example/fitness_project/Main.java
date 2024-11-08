@@ -39,28 +39,21 @@ public class Main extends AppCompatActivity {
         exerciseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                openTimerActivity(position);
+
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
+            public void onNothingSelected(AdapterView<?> parentView) {}
         });
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         Button startButton = findViewById(R.id.startButton);
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openTimerActivity(-1);
-            }
+        startButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Main.this, Timer.class);
+            startActivity(intent);
         });
+
     }
 
-    private void openTimerActivity(int exerciseIndex) {
-        Intent intent = new Intent(Main.this, Timer.class);
 
-        intent.putExtra("EXERCISE_INDEX", exerciseIndex);
-        startActivity(intent);
-    }
 }
